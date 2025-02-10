@@ -20,13 +20,11 @@ async function consume() {
       // simulate processing delay
       // this causes way slower message processing
       // try uncommenting this line => consumer catches up and is on par with producer
-      // introducing even a 1ms delay => consumer slows down hard
-      await new Promise(resolve => setTimeout(resolve, 1));
+      // introducing some delay => consumer slows down
+      await new Promise(resolve => setTimeout(resolve, 2));
       
       processed++;
-      if (processed % 1000 === 0) {
-        console.log(`Processed ${processed} messages.`);
-      }
+      console.log(`Processed ${processed} messages.`);
     }
   });
 }
