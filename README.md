@@ -21,3 +21,10 @@ Benching things is not my strong suit, but what I observed:
 
 - Using promises inside the message handler e.g. with our artifical handler causes the consumption to slow down hard
 - Checking docker memory stats, it looks to me like there is a memory leak. It kept rising.
+
+## Test Environment
+
+- OS: macOS Sequoia 15.3
+- Node.js: latest LTS
+- Kafka: confluentinc/cp-kafka:latest
+- Zookeeper: confluentinc/cp-zookeeper:latest
